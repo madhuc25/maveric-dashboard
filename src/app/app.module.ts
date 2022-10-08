@@ -10,13 +10,15 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { UsersService } from './services/users.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ViewDetailsComponent } from './components/view-details/view-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     SignInComponent,
-    DashboardComponent
+    DashboardComponent,
+    ViewDetailsComponent
   ],
   imports: [
     BrowserModule,

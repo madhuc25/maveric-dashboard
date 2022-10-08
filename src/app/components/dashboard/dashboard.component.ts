@@ -1,5 +1,6 @@
 import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Idea } from 'src/app/models/user.model';
 import { IdeaService } from 'src/app/services/idea.service';
 
@@ -11,7 +12,8 @@ import { IdeaService } from 'src/app/services/idea.service';
 export class DashboardComponent implements OnInit {
   public ideas: Idea[] = [];
 
-  constructor(private locationStrategy: LocationStrategy, private idaeService: IdeaService) { }
+  constructor(private locationStrategy: LocationStrategy, private idaeService: IdeaService,
+    private router: Router ) { }
 
   ngOnInit(): void {
     this.preventBackButton();
@@ -28,8 +30,11 @@ export class DashboardComponent implements OnInit {
   getIdea() {
     this.idaeService.getIdea().subscribe((data: Idea[]) => {
       this.ideas = data;
-      console.log(this.ideas);
-      
+      console.log(this.ideas);    
     })
+  }
+
+  viewDetails() {
+    this.router.navigateByUrl('/viewDetails');
   }
 }
