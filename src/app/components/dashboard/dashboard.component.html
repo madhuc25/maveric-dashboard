@@ -1,0 +1,107 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="../../../assets/Maveric-Logo.png">
+            <h4>Idea Dashboard</h4>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Menu</p>
+            <li>
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-desktop" aria-hidden="true"></i>
+                    Dashboard</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled components">
+            <p>Personalization</p>
+            <li>
+                <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
+                    Join mail list</a>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled components">
+            <p><i class="fa fa-cog" aria-hidden="true"></i>
+                Settings</p>
+            <p><i class="fa fa-info-circle" aria-hidden="true"></i>
+                Help</p>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <div class="dash-header">
+            <div class="input-group" style="width: 300px">
+                <input class="form-control border-end-0 border rounded-pill" type="text" value="search"
+                    id="example-search-input">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3"
+                        type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+            <div class="profile">
+                <h5>Srivathsan</h5>
+                <img class="circular--square" src="../../../assets/Ellipse-615.png" />
+            </div>
+
+        </div>
+        <div class="dash-subheader">
+            <h3>Dashboard</h3>
+            <p>See all the ideas and projects posted by Maveric members. You can create a post for idea or project
+                by going to that category and clicking on the ‘+’ icon.</p>
+        </div>
+
+        <div class="tabs">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Idea</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="body">
+            <div class="sub-body">
+                <h5>Your Feed</h5>
+                <button class="add-idea"><span><i class="fa fa-plus"></i>
+                    </span>New Idea</button>
+            </div>
+            <div *ngFor="let idea of ideas">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-body-left">
+                            <img class="circular--square" src="../../../assets/Ellipse-615.png" />
+                        </div>
+                        <div>
+                            <div class="card-heading">
+                                <h5 class="card-title">{{idea.userName}}</h5>
+                                <button class="view-details">View details</button>
+                            </div>
+                            <h6 class="card-subtitle mt-4 mb-2">{{idea.title}}</h6>
+                            <p class="card-text">{{idea.description}}</p>
+                            <div class="card-options">
+                                <a ><i class="fa fa-thumbs-up" aria-hidden="true"></i>Like</a>
+                                <a ><i class="fa fa-comment" aria-hidden="true"></i>Comment</a>
+                                <a ><i class="fa fa-envelope" aria-hidden="true"></i>Email</a>
+                                <a ><i class="fa fa-upload" aria-hidden="true"></i>Share</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

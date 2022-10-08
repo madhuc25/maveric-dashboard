@@ -1,0 +1,71 @@
+.box-form {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    background: #FFFFFF;
+    display: flex;
+}
+
+.left {
+    width: 60%;
+    display: block;
+}
+
+.left img {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title-section {
+    margin-top: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.title-section img {
+    margin-bottom: 12px;
+}
+
+.title {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.right {
+    width: 40%;
+    display: block;
+}
+
+.form {
+    padding: 20px;
+}
+
+.form p {
+    text-align: center;
+}
+
+.signin-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #653FB1;
+}
+
+.signin-button:disabled {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: #9F6FFF;
+}

@@ -1,0 +1,45 @@
+<div class="box-form">
+    <div class="right">
+        <div class="title-section">
+            <img src="../../../assets/Maveric-Logo.png"><span class="title">Idea Dashboard</span>
+        </div>
+        <div class="form">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Middle Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="middleName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Middle Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="confirmPassword">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">By creating an account you agree to <a href="#">T&C</a>and our <a href="#">Privacy and Policy</a></label>
+                </div>
+                <button type="submit" class="signup-button" [disabled]="!signUpForm.valid">SignUp</button>
+            </form>
+            <p>Already have an account? <a [routerLink]="['/']">Log In</a></p>
+        </div>
+    </div>
+    <div class="left">
+        <img src="../../../assets/Group-19116.png">
+    </div>
+
+</div>
